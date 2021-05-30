@@ -1,4 +1,4 @@
-class Temperatura:
+class 
   def __init__(self, escala, temperatura):
     self.escala = escala
     self.temperatura = temperatura
