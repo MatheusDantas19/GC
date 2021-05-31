@@ -53,12 +53,13 @@ class TestTemperaturaKelvin(unittest.TestCase):
     self.assertEqual(self.conversorTest.temperatura, 80.3)
 
 if __name__ == '__main__':
-  # unittest.main(argv=['first-arg-is-ignored'], exit=False)
-  suite = unittest.TestSuite()
-  suite.addTest(TestTemperaturaCelsius('testCelsiusToKelvin'))
-  result = unittest.TextTestRunner(verbosity=2).run(suite)
+  unittest.main()
+  # suite = unittest.TestSuite()
+  # suite.addTest(TestTemperaturaCelsius('testCelsiusToKelvin'))
+
+  # result = unittest.TextTestRunner(verbosity=2).run(suite)
  
-  if result.wasSuccessful():
-    exit(0)
-  else:
-    exit(1)
+  # if result.wasSuccessful():
+  #   exit(0)
+  # else:
+  #   exit(1)
