@@ -10,7 +10,7 @@ class TestTemperaturaCelsius(unittest.TestCase):
     self.conversorTest.convert('K')
 
     self.assertEqual(self.conversorTest.escala,'K')
-    self.assertEqual(self.conversorTest.temperatura, 0.00) #283.15
+    self.assertEqual(self.conversorTest.temperatura, 0.00)
 
   def testCelsiusToFahrenheit(self):
     self.conversorTest.convert('F')
@@ -53,4 +53,12 @@ class TestTemperaturaKelvin(unittest.TestCase):
     self.assertEqual(self.conversorTest.temperatura, 80.3)
 
 if __name__ == '__main__':
-  unittest.main(argv=['first-arg-is-ignored'], exit=False)
+  # unittest.main(argv=['first-arg-is-ignored'], exit=False)
+  suite = unittest.TestSuite()
+  suite.addTest(TestTemperaturaCelsius('testCelsiusToKelvin'))
+  result = unittest.TextTestRunner(verbosity=2).run(suite)
+ 
+  if result.wasSuccessful():
+    exit(0)
+  else:
+    exit(1)
