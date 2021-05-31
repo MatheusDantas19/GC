@@ -18,39 +18,39 @@ class TestTemperaturaCelsius(unittest.TestCase):
     self.assertEqual(self.conversorTest.escala,'F')
     self.assertEqual(self.conversorTest.temperatura, 50.00)
 
-# class TestTemperaturaFahrenheit(unittest.TestCase):
+class TestTemperaturaFahrenheit(unittest.TestCase):
 
-#   def setUp(self):
-#     self.conversorTest = Temperatura('F', 32)
+  def setUp(self):
+    self.conversorTest = Temperatura('F', 32)
 
-#   def testFahrenheitToCelsius(self):
-#     self.conversorTest.convert('C')
+  def testFahrenheitToCelsius(self):
+    self.conversorTest.convert('C')
 
-#     self.assertEqual(self.conversorTest.escala,'C')
-#     self.assertEqual(self.conversorTest.temperatura, 0)
+    self.assertEqual(self.conversorTest.escala,'C')
+    self.assertEqual(self.conversorTest.temperatura, 0)
 
-#   def testFahrenheitToKelvin(self):
-#     self.conversorTest.convert('K')
+  def testFahrenheitToKelvin(self):
+    self.conversorTest.convert('K')
 
-#     self.assertEqual(self.conversorTest.escala,'K')
-#     self.assertEqual(self.conversorTest.temperatura, 273.15)
+    self.assertEqual(self.conversorTest.escala,'K')
+    self.assertEqual(self.conversorTest.temperatura, 273.15)
 
-# class TestTemperaturaKelvin(unittest.TestCase):
+class TestTemperaturaKelvin(unittest.TestCase):
 
-#   def setUp(self):
-#     self.conversorTest = Temperatura('K', 300)
+  def setUp(self):
+    self.conversorTest = Temperatura('K', 300)
 
-#   def testKelvintToCelsius(self):
-#     self.conversorTest.convert('C')
+  def testKelvintToCelsius(self):
+    self.conversorTest.convert('C')
 
-#     self.assertEqual(self.conversorTest.escala,'C')
-#     self.assertEqual(self.conversorTest.temperatura, 26.85)
+    self.assertEqual(self.conversorTest.escala,'C')
+    self.assertEqual(self.conversorTest.temperatura, 26.85)
 
-#   def testKelvinToFahrenheit(self):
-#     self.conversorTest.convert('F')
+  def testKelvinToFahrenheit(self):
+    self.conversorTest.convert('F')
 
-#     self.assertEqual(self.conversorTest.escala,'F')
-#     self.assertEqual(self.conversorTest.temperatura, 80.3)
+    self.assertEqual(self.conversorTest.escala,'F')
+    self.assertEqual(self.conversorTest.temperatura, 80.3)
 
 if __name__ == '__main__':
   unittest.main(argv=['first-arg-is-ignored'], exit=False)
